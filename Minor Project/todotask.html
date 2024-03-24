@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager | Shyam</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .task-list {
+      margin-bottom: 20px;
+    }
+    .task {
+      display: flex;
+      align-items: center;
+    }
+    .task input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .edit-btn {
+      margin-left: auto;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1>Task Manager <span class="text-danger">-</span> By <span class="text-primary">SHYAM</span></h1>
+  <div id="taskForm" class="mb-3">
+    <input type="text" id="taskInput" class="form-control" placeholder="Enter task...">
+    <button id="addTaskBtn" class="btn btn-primary mt-2">Add Task</button>
+  </div>
+  <div id="taskList" class="task-list">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+  const taskList = document.getElementById('taskList');
+  const taskInput = document.getElementById('taskInput');
+  const addTaskBtn = document.getElementById('addTaskBtn');
+
+  function addTask() {
+    const taskText = taskInput.value.trim();
+    if (taskText === '') {
+      alert('Please enter a task.');
+      return;
+    }
+    const existingTasks = document.querySelectorAll('.task span');
+    for (let i = 0; i < existingTasks.length; i++) {
+      if (existingTasks[i].textContent === taskText) {
+        alert('Task already exists.');
+        return;
+      }
+    }
+    const taskItem = document.createElement('div');
+    taskItem.classList.add('task');
+    taskItem.innerHTML = `
+      <input type="checkbox">
+      <span>${taskText}</span>
+      <button class="btn btn-secondary edit-btn" style="height:2.5rem;margin-bottom:0.5rem;">Edit</button>
+    `;
+    taskList.appendChild(taskItem);
+    taskInput.value = '';
+  }
+
+  addTaskBtn.addEventListener('click', addTask);
+
+  taskList.addEventListener('change', function(event) {
+    if (event.target.matches('input[type="checkbox"]')) {
+      const taskText = event.target.nextElementSibling;
+      if (event.target.checked) {
+        taskText.style.textDecoration = 'line-through';
+      } else {
+        taskText.style.textDecoration = 'none';
+      }
+    }
+  });
+
+  taskList.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit-btn')) {
+      const taskText = event.target.previousElementSibling;
+      const newText = prompt('Edit task:', taskText.textContent);
+      if (newText !== null) {
+        taskText.textContent = newText.trim();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
