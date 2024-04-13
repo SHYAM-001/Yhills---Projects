@@ -1,6 +1,15 @@
 # Hi, I'm Shyam K S! 👋
 
+# Major Project 
+ It is a DigitalCraft Studio company website, it shows the what is the DigitalCraft Studio and what are the services provided by the company and the projects created by them and User can also Contact the Company. The Contacat page is a functional one.
 
+# Technology Used:
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- EmailJs : For the contact Page functionality.
+  
 ![image](https://github.com/SHYAM-001/Yhills---Projects/assets/103324177/a5c4b2f2-b566-40b9-8c0b-fcce098e1956)
 
 ![image](https://github.com/SHYAM-001/Yhills---Projects/assets/103324177/08d814d8-42d2-4d66-9d67-df2b06038e5f)
@@ -11,18 +20,17 @@
 
 ![image](https://github.com/SHYAM-001/Yhills---Projects/assets/103324177/cdc01ec4-a074-426d-bc85-5c4f397dd6db)
 
-
-
-
-# Major Project 
- It is a DigitalCraft Studio company website, it shows the what is the DigitalCraft Studio and what are the services provided by the company and the projects created by them and User can also Contact the Company. The Contacat page is a functional one.
+# Minor Project 
+  It is a TO DO List buil using the javasript and HTML and CSS. The user can add,edit and after done the job , they can mark the task as done . 
 
 # Technology Used:
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
-- EmailJs : For the contact Page functionality.
+
+
+
 
 
 ![image](https://github.com/SHYAM-001/Yhills---Projects/assets/103324177/eef4e7de-a4c4-4c9e-869c-0cd7a17b1c58)
@@ -35,14 +43,7 @@
 
 
 
-# Minor Project 
-  It is a TO DO List buil using the javasript and HTML and CSS. The user can add,edit and after done the job , they can mark the task as done . 
 
-# Technology Used:
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
 
 
 
